@@ -7,11 +7,11 @@ Log proces taking more than a threshold of cpu or memory, every one sec.
 
 `sudo apt-get install -y libprocps-dev`
 
-## build
+## Build
 
 `g++ monitor.cpp -o monitor -lprocps`
 
-## run and log 
+## Run and log 
 
 - when cpu usage >50
 - memory use >50
@@ -19,6 +19,7 @@ Log proces taking more than a threshold of cpu or memory, every one sec.
 
 `./monitor usage_log.txt 50 50 1 &`
 
+## Add as systemd service
 
 To run the program in the background even after a restart, you can create a systemd service for it. First, compile the program and move the binary to an appropriate location (e.g., /usr/local/bin).
 
