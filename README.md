@@ -13,6 +13,7 @@ Log proces taking more than a threshold of cpu or memory, every one sec.
 
 ## Run and log 
 
+- ./monitor  <log_filename> <cpu_threshold> <mem_threshold> <interval_sec>
 - when cpu usage >50
 - memory use >50
 - every 1 second

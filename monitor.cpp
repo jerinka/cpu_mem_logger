@@ -71,12 +71,12 @@ bool logUsage(const std::string& filename, double cpuThreshold, double memThresh
 }
 
 int main(int argc, char* argv[]) {
-    if (argc != 4) {
-        std::cerr << "Usage: " << argv[0] << " <log_filename> <cpu_threshold> <mem_threshold>" << std::endl;
+    if (argc != 5) {
+        std::cerr << "Usage: " << argv[0] << " <log_filename> <cpu_threshold> <mem_threshold> <interval_sec>" << std::endl;
         return 1;
     }
 
-    std::string logFilename = argv[1];
+    std::string logFilename       = argv[1];
     double cpuThreshold = std::stod(argv[2]);
     double memThreshold = std::stod(argv[3]);
     int intervalSeconds = std::stod(argv[4]);
