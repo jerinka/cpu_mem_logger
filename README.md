@@ -5,20 +5,26 @@ Log proces taking more than a threshold of cpu or memory, every one sec.
 
 ## Install
 
-`sudo apt-get install -y libprocps-dev`
+```bash
+sudo apt-get install -y libprocps-dev
+```
 
 ## Build
 
-`g++ monitor.cpp -o monitor -lprocps`
+```bash
+g++ monitor.cpp -o monitor -lprocps
+```
 
 ## Run and log 
 
-- ./monitor  <log_filename> <cpu_threshold> <mem_threshold> <interval_sec>
+- `./monitor  <log_filename> <cpu_threshold> <mem_threshold> <interval_sec>`
 - when cpu usage >50
 - memory use >50
 - every 1 second
 
-`./monitor usage_log.txt 50 50 1 &`
+```bash
+./monitor usage_log.txt 50 50 1 &
+```
 
 ## Add as systemd service
 
